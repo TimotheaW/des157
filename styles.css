@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  text-align:center;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 300%;
@@ -13,7 +13,7 @@ h1 {
   text-decoration-line: underline;
   text-decoration-color: #FF676B;
   position: absolute;
-  top:100px;
+  top: 100px;
   width: 100%;
 }
 
@@ -25,21 +25,17 @@ h2 {
   padding-left: 20%;
 }
 
-nav{
+nav {
   margin-top: 5%;
   padding-left: 23%;
 }
 
-img {
-  margin:auto;
-}
-
 ol {
-    list-style: decimal;
+  list-style: decimal;
 }
 
 ul {
-    list-style: circle;
+  list-style: circle;
 }
 
 a {
@@ -69,7 +65,7 @@ li {
 
 #mySketch {
   position: relative;
-  margin:auto;
+  margin: auto;
   width: 800px;
   height: 250px;
   top: 0px;
@@ -82,7 +78,7 @@ section {
   bottom: 0px;
 }
 
-div:first-child{
+div:first-child {
   background-color: #2F2F74;
   color: #FFFFFF;
   float: left;
@@ -91,18 +87,22 @@ div:first-child{
   margin: 0;
 }
 
-div:last-child{
-  background-color:  #FF676B;
+div:last-child {
+  background-color: #FF676B;
   color: #FFFFFF;
   float: right;
   width: 50%;
   height: 100%;
 }
 
+img {
+  margin: auto;
+}
+
 footer {
   clear: both;
   position: fixed;
-  bottom:0;
+  bottom: 0;
   /* background-color: black; */
   width: 100%;
   height: 30px;
