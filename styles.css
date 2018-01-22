@@ -33,15 +33,9 @@ h2 {
 }
 
 nav{
-  margin-top: 5%;
   padding-left: 23%;
+  padding-top:80px;
   color: #FFFFFF;
-}
-
-section img {
-  margin-left:25%;
-  padding-top:70px;
-  padding-bottom:70px;
 }
 
 ol {
@@ -76,10 +70,19 @@ section {
   width: 100%;
   top: 29%;
   bottom: 0px;
+  position: fixed;
 }
 
 .projects-section {
   background: #FF676B;
+  position: relative;
+  top:auto;
+}
+
+.projects-section img {
+  margin-left:25%;
+  padding-top:70px;
+  padding-bottom:70px;
 }
 
 div:first-child{
@@ -88,7 +91,6 @@ div:first-child{
   float: left;
   width: 50%;
   height: 100%;
-  margin: 0;
 }
 
 div:last-child{
@@ -109,7 +111,6 @@ footer {
   color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 13px;
-  padding: 8px;
   padding-left: 100px;
   padding-bottom: 0px;
   margin:auto;
