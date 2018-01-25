@@ -45,7 +45,6 @@ nav {
   padding-left: 23%;
 }
 
->>>>>>> 113aae4dffd84a63d3b26583d79709863481e69a
 ol {
   list-style: decimal;
 }
@@ -64,6 +63,16 @@ li {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   line-height: 30px;
+}
+
+p {
+  padding: 30px;
+  width: 70%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  margin:auto;
+  color: #FFFFFF;
 }
 
 #mySketch {
@@ -88,9 +97,10 @@ section {
 }
 
 .projects-section img {
-  margin-left:25%;
-  padding-top:70px;
-  padding-bottom:70px;
+  margin-left:23%;
+  padding-top:50px;
+  padding-bottom:50px;
+  width:50%;
 }
 
 div:first-child {
