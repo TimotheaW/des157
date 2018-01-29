@@ -8,7 +8,6 @@ body {
   background-attachment: fixed;
 }
 
-
 section:first-child {
   /* margin-top: 10%; */
   margin-left: 55%;
@@ -61,14 +60,27 @@ input {
   font-family: Raleway, sans-serif;
 }
 
+input[type="text"]:focus {
+  background-color: #4c3691;
+}
+
 input[type="reset"], input[type="submit"] {
   width: 15%;
   height:45px;
   margin: 2%;
   padding:10px;
   float: right;
+  background-color: transparent;
+  border: 2px #ffaa00 solid;
+  color: #ffaa00;
+  font-weight: bold;
+}
+
+input[type="reset"]:hover, input[type="submit"]:hover {
   border:none;
   background-color: #ffaa00;
+  color: white;
+  font-weight: 400;
 }
 
 #bottom-reset {
