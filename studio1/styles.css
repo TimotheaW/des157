@@ -1,47 +1,41 @@
-/*------prompts appear on first 'page', looking all pretty. good design
-BUT THEN the second 'page' with the responses uses bad design and the message is in a font like comic sans.
-----*/
-
 body {
-  width: 1366px;
-  height: 768px;
-  font-family: Raleway;
+  height: 100%;
+  font-family: Raleway, sans-serif;
+  background-image: url("images/madlib-bg.png");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-/*
-.container {
-  top:0;
-} */
+
 
 section:first-child {
-  margin-top: 10%;
-  margin: auto;
-  border-style: solid;
-  border-color: red;
+  /* margin-top: 10%; */
+  margin-left: 55%;
   border-radius: 30px;
   background-color: white;
-  /*--add drop shadow? style the article with rounded corners--*/
-  padding: 10px;
   padding-top: 60px;
   padding-bottom:80px;
   text-align: center;
-  width: 600px;
+  width: 550px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
 }
 
 section:last-child {
-  margin-top: 10%;
-  margin: auto;
+  margin-left: 55%;
   margin-bottom: 10%;
-  border-style: solid;
-  border-color: red;
   border-radius: 30px;
   background-color: white;
-  /*--add drop shadow? style the article with rounded corners--*/
-  padding: 10px;
-  text-align: center;
-  width: 600px;
+  width: 550px;
   height: auto;
-  /* position: relative; */
+  position: relative;
   top: 100px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+}
+
+#container {
+  margin-top: 6%;
+  height:auto;
 }
 
 div {
@@ -53,6 +47,7 @@ label {
   text-align: right;
   display: inline-block;
   padding-right:3%;
+  font-size: 14px;
 }
 
 input {
@@ -61,8 +56,9 @@ input {
   padding: 1%;
   border:none;
   border-radius: 10px;
-  background-color:lightblue;
+  background-color:#7459c6;
   color: white;
+  font-family: Raleway, sans-serif;
 }
 
 input[type="reset"], input[type="submit"] {
@@ -72,11 +68,23 @@ input[type="reset"], input[type="submit"] {
   padding:10px;
   float: right;
   border:none;
-  background-color: red;
+  background-color: #ffaa00;
+}
+
+#bottom-reset {
+  position:relative;
+  margin-top: 3%;
 }
 
 p {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
   color: black;
+  text-align: left;
+  line-height: 1.5em;
+  margin:30px;
+  padding-top: 30px;
+  padding-bottom:30px
 }
 
 .show {
@@ -91,4 +99,12 @@ footer {
   position:fixed;
   bottom:0;
   padding:20px;
+  right:0;
+}
+
+a{
+  color:#FFFFFF;
+  text-decoration: none;
+  font-size: 11px;
+  padding-right:20px;
 }

@@ -10,45 +10,42 @@
 	</head>
 
 	<body>
-		<header>
-			<img/> <!---insert header image representing "bad clients"-->
-		</header>
 		<div id=container>
 			<section>
 				<form name="f">
 					<div>
 						<label for="userName">name</label>
-						<input type="text" name="userName">
+						<input type="text" name="userName" required>
 					</div>
 
 					<div>
 						<label for="noun1">noun 1</label>
-						<input type="text" name="noun1">
+						<input type="text" name="noun1" required>
 					</div>
 
 					<div>
 						<label for="designSpecialization">your design specialization</label>
-						<input type="text" name="designSpecialization">
+						<input type="text" name="designSpecialization" required>
 					</div>
 
 					<div>
 						<label for="famousCompany">famous company</label>
-						<input type="text" name="famousCompany">
+						<input type="text" name="famousCompany" required>
 					</div>
 
 					<div>
 						<label for="num">number</label>
-						<input type="text" name="num">
+						<input type="text" name="num" required>
 					</div>
 
 					<div>
 						<label for="color">color</label>
-						<input type="text" name="color">
+						<input type="text" name="color" required>
 					</div>
 
 					<div>
 						<label for="animal">animal</label>
-						<input type="text" name="animal">
+						<input type="text" name="animal" required>
 					</div>
 
 					<div>
@@ -70,8 +67,9 @@
 					</form>
 			</section>
 
-			<section id="results" class="show">
+			<section id="results" class="hide">
 				<p id="msg"></p>
+				<input id="bottom-reset" type="reset" value="reset">
 			</section>
 		</div>
 
