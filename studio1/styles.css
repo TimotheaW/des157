@@ -1,0 +1,94 @@
+/*------prompts appear on first 'page', looking all pretty. good design
+BUT THEN the second 'page' with the responses uses bad design and the message is in a font like comic sans.
+----*/
+
+body {
+  width: 1366px;
+  height: 768px;
+  font-family: Raleway;
+}
+
+container {
+  top:0;
+}
+
+section:first-child {
+  margin-top: 10%;
+  margin: auto;
+  border-style: solid;
+  border-color: red;
+  border-radius: 30px;
+  background-color: white;
+  /*--add drop shadow? style the article with rounded corners--*/
+  padding: 10px;
+  padding-top: 60px;
+  padding-bottom:80px;
+  text-align: center;
+  width: 600px;
+}
+
+section:last-child {
+  margin-top: 10%;
+  margin: auto;
+  margin-bottom: 10%;
+  border-style: solid;
+  border-color: red;
+  border-radius: 30px;
+  background-color: white;
+  /*--add drop shadow? style the article with rounded corners--*/
+  padding: 10px;
+  text-align: center;
+  width: 600px;
+  height: auto;
+  position: relative;
+  top: 100px;
+}
+
+div {
+  margin: 2%;
+}
+
+label {
+  width: 6em;
+  text-align: right;
+  display: inline-block;
+  padding-right:3%;
+}
+
+input {
+  width: 40%;
+  height: 35px;
+  padding: 1%;
+  border:none;
+  border-radius: 10px;
+  background-color:lightblue;
+  color: white;
+}
+
+input[type="reset"], input[type="submit"] {
+  width: 15%;
+  height:45px;
+  margin: 2%;
+  padding:10px;
+  float: right;
+  border:none;
+  background-color: red;
+}
+
+p {
+  color: black;
+}
+
+.show {
+  display:block;
+}
+
+.hide {
+  display:none;
+}
+
+footer {
+  position:fixed;
+  bottom:0;
+  padding:20px;
+}
