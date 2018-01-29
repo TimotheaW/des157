@@ -7,10 +7,10 @@ body {
   height: 768px;
   font-family: Raleway;
 }
-
-container {
+/*
+.container {
   top:0;
-}
+} */
 
 section:first-child {
   margin-top: 10%;
@@ -40,7 +40,7 @@ section:last-child {
   text-align: center;
   width: 600px;
   height: auto;
-  position: relative;
+  /* position: relative; */
   top: 100px;
 }
 
