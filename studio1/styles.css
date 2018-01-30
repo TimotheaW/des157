@@ -9,11 +9,11 @@ body {
 }
 
 section:first-child {
-  /* margin-top: 10%; */
   margin-left: 55%;
+  margin-bottom: 5%;
   border-radius: 30px;
   background-color: white;
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom:80px;
   text-align: center;
   width: 550px;
@@ -23,6 +23,7 @@ section:first-child {
 section:last-child {
   margin-left: 55%;
   margin-bottom: 10%;
+  padding: 1px 4px 1px 10px;
   border-radius: 30px;
   background-color: white;
   width: 550px;
@@ -85,7 +86,7 @@ input[type="reset"]:hover, input[type="submit"]:hover {
 
 #bottom-reset {
   position:relative;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 p {

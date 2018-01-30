@@ -13,7 +13,7 @@ bottomReset.onclick=resetForm;
 
 function processForm() {
   results.setAttribute('class','show');
-  container.style.marginTop = '-39%';
+  container.style.marginTop = '-40%';
 
   var userName= document.f.userName.value;
   var noun1= document.f.noun1.value;
