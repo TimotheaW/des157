@@ -1,0 +1,178 @@
+body {
+  width: 100%;
+  font-family: 'Comfortaa', cursive;
+  background-image: url(images/studio2-bg.png);
+  background-position: center;
+  background-size: cover;
+  margin:0;
+}
+
+h1{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 100px;
+  color: #154FCA;
+}
+section {
+  position: relative;
+}
+
+/*handwritten img styles*/
+#highlight {
+  position: absolute;
+  bottom: 90%;
+  left: 10%;
+}
+
+#whiteout {
+  position: absolute;
+  top: 80px;
+  left: 25%;
+}
+
+#pen {
+  position: absolute;
+  top: 900%;
+  left: 40%;
+}
+
+#earphones{
+  position: absolute;
+  margin-bottom: 300%;
+  left: 25%;
+}
+
+
+/*pencilcase img styles*/
+#pencil-case {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  margin-top:45%;
+  position: absolute;
+}
+
+/*OVERLAY AND CLOSE--------------------------------------------*/
+
+/*HIGHLIGHT*/
+#highlight-overlay {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50, -50);
+  background-color:white;
+  width: 50%;
+  height: 50%;
+  display:none;
+  color: pink;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: pink;
+  /* padding: 20px; */
+}
+
+#highlight-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/*WHITEOUT*/
+#whiteout-overlay {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50, -50);
+  background-color:white;
+  width: 50%;
+  height: 50%;
+  display:none;
+  color: blue;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: blue;
+}
+
+#whiteout-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/*PEN*/
+#pen-overlay {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50, -50);
+  background-color:white;
+  width: 50%;
+  height: 50%;
+  display:none;
+  color: black;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: black;
+}
+
+#pen-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/*EARPHONES*/
+#earphones-overlay {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50, -50);
+  background-color:white;
+  width: 50%;
+  height: 50%;
+  display:none;
+  color: green;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: green;
+}
+
+#earphones-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+footer {
+  position:fixed;
+  bottom:0;
+  padding:20px;
+  right:0;
+}
+
+a{
+  color:#154FCA;
+  text-decoration: none;
+  font-size: 11px;
+  padding-right:20px;
+}
+
+
+/*media query for desktop view: min condition: 768px
+  will only be applied when screen is equal or less than 768px
+*/
+@media only screen and (min-width:769px) {
+  h1 {
+    font-size: 50px;
+    margin-bottom: 150px;
+    color: red;
+  }
+
+  #pencil-case {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(360deg);
+    margin-top:5%;
+    width: 50%;
+  }
+}
