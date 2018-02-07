@@ -39,7 +39,7 @@ pencilCase.addEventListener("click", function(){
 
 //HIGHLIGHT overlays and close buttons--------------------------------------------------------------
 highlight.addEventListener("click", function(){
-  highlightOverlay.style.display="block";
+    highlightOverlay.style.display="block";
 });
 
 highlightClose.addEventListener("click", function(){
