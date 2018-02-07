@@ -25,10 +25,18 @@ var earphonesClose = document.getElementById('earphones-close');
 //pencil case open and close toggle--------------------------------------------------------------
 pencilCase.addEventListener("click", function(){
   console.log(pencilCase.src);
-  if(pencilCase.src=="images/bad-closed.png"){
-    pencilCase.src="images/open-case-traced.svg";
+  if(pencilCase.src=="https://timotheaw.github.io/des157/studio2/images/bad-closed.png"){
+    pencilCase.src="https://timotheaw.github.io/des157/studio2/images/open-case-traced.svg";
+    highlight.setAttribute("class","show");
+    whiteout.setAttribute("class","show");
+    pen.setAttribute("class","show");
+    earphones.setAttribute("class","show");
   } else {
-    pencilCase.src="images/bad-closed.png";
+    pencilCase.src="https://timotheaw.github.io/des157/studio2/images/bad-closed.png";
+    highlight.setAttribute("class","hide");
+    whiteout.setAttribute("class","hide");
+    pen.setAttribute("class","hide");
+    earphones.setAttribute("class","hide");
   }
   pencilCase.style.cursor="pointer";
 });

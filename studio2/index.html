@@ -7,6 +7,7 @@
 		<link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
 		<link href="styles.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,700" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
 	</head>
 
@@ -17,29 +18,34 @@
 			</header>
 			<section>
 				<img src="images/bad-closed.png" alt="closed case" width="250" id="pencil-case"/>
-				<img src="images/highlight.png" alt="page bookmarks" width="150" id="highlight"/>
-				<img src="images/whiteout.png" alt="whiteout" width="150" id="whiteout"/>
-				<img src="images/pen.png" alt="pen" width="150" id="pen"/>
-				<img src="images/earphones.png" alt="Apple earphones" width="150" id="earphones"/>
+				<img src="images/highlight.png" alt="page bookmarks" width="250" id="highlight" class="hide"/>
+				<img src="images/whiteout.png" alt="whiteout" width="250" id="whiteout" class="hide"/>
+				<img src="images/pen.png" alt="pen" width="250" id="pen" class="hide"/>
+				<img src="images/earphones.png" alt="earphones" width="250" id="earphones" class="hide"/>
 			</section>
 
 			<section id="highlight-overlay">
-				<p>These are my page markers.</p>
-				<div id="highlight-close">&otimes;</div>
+				<h2>MINI PAGE FLAGS</h2>
+				<p>I use these as bookmarks in everything to remind me of important information. I prefer these over normal bookmarks because they stick onto the page and don't fall out, an occurrence that then defeats the very purpose of bookmarks.</p>
+				<div id="highlight-close" >&otimes;</div>
+				<!--can only open one overlay at once-->
 			</section>
 
 			<section id="whiteout-overlay">
-				<p>This my whiteout.</p>
+				<h2>WHITEOUT (REDO, REDO!)</h2>
+				<p>I always write in pen and I always mess up, so whiteout is basically my second best friend. Did you meet BFF #1 already?</p>
 				<div id="whiteout-close">&otimes;</div>
 			</section>
 
 			<section id="pen-overlay">
-				<p>Sigma 0.38 pens. The best.</p>
+				<h2>UNIBALL SIGNO 0.38 PEN IN BLACK</h2>
+				<p>Meet BFF #1. These are basically the only pens I use...I probably have about 20 of them, dispersed throughout my room and all of my bags.</p>
 				<div id="pen-close">&otimes;</div>
 			</section>
 
 			<section id="earphones-overlay">
-				<p>I need these everywhere I go.</p>
+				<h2>EARPHONES</h2>
+				<p>These little ones help me stay awake. I'm not sure how they ended up in here, though.</p>
 				<div id="earphones-close">&otimes;</div>
 			</section>
 

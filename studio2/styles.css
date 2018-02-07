@@ -1,45 +1,60 @@
 body {
   width: 100%;
-  font-family: 'Comfortaa', cursive;
+  font-family: Raleway, sans-serif;
   background-image: url(images/studio2-bg.png);
   background-position: center;
   background-size: cover;
   margin:0;
 }
 
+section {
+  position: relative;
+}
+
+/*TEXT------------------*/
 h1{
+  font-family: 'Comfortaa', cursive;
   font-size: 50px;
   text-align: center;
   margin-top: 100px;
   color: #154FCA;
+  font-weight: 700;
 }
-section {
-  position: relative;
+
+h2{
+  font-size: 20px;
+  text-align: center;
+  color: #154FCA;
+  font-weight: bold;
+}
+
+p{
+  font-size: 15px;
+  line-height: 1.7em;
 }
 
 /*handwritten img styles*/
 #highlight {
   position: absolute;
-  bottom: 90%;
-  left: 10%;
+  left: 35%;
 }
 
 #whiteout {
   position: absolute;
-  top: 80px;
-  left: 25%;
+  top: 200px;
+  left: 20%;
 }
 
 #pen {
   position: absolute;
-  top: 900%;
-  left: 40%;
+  top: 130px;
+  left: 55%;
 }
 
 #earphones{
   position: absolute;
-  margin-bottom: 10%;
-  left: 25%;
+top: 400px;
+  left: 55%;
 }
 
 
@@ -62,14 +77,20 @@ section {
   left:50%;
   transform: translate(-50%, -50%);
   background-color:white;
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
   display:none;
   color: pink;
   border-radius: 30px;
   border-style: solid;
   border-color: pink;
-  /* padding: 20px; */
+  border-width: 2px;
+  padding: 25px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+}
+
+#highlight-overlay h2 {
+  color: pink;
 }
 
 #highlight-close {
@@ -85,13 +106,20 @@ section {
   left:50%;
   transform: translate(-50%, -50%);
   background-color:white;
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
   display:none;
-  color: blue;
+  color: #154FCA;
   border-radius: 30px;
   border-style: solid;
-  border-color: blue;
+  border-color: #154FCA;
+  border-width: 2px;
+  padding: 25px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+}
+
+#whiteout-overlay h2 {
+  color: blue;
 }
 
 #whiteout-close {
@@ -107,13 +135,20 @@ section {
   left:50%;
   transform: translate(-50%, -50%);
   background-color:white;
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
   display:none;
-  color: black;
+  color: darkgray;
   border-radius: 30px;
   border-style: solid;
-  border-color: black;
+  border-color: darkgray;
+  border-width: 2px;
+  padding: 25px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+}
+
+#pen-overlay h2 {
+  color: darkgray;
 }
 
 #pen-close {
@@ -129,19 +164,35 @@ section {
   left:50%;
   transform: translate(-50%, -50%);
   background-color:white;
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
   display:none;
   color: green;
   border-radius: 30px;
   border-style: solid;
   border-color: green;
+  border-width: 2px;
+  padding: 25px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+}
+
+#earphones-overlay h2 {
+  color: green;
 }
 
 #earphones-close {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+/*show and hide classes to make the handwritten elements appear only when the pouch is open */
+.show {
+  display: block;
+}
+
+.hide {
+  display:none;
 }
 
 footer {
