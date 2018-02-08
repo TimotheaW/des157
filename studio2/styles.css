@@ -5,6 +5,7 @@ body {
   background-position: center;
   background-size: cover;
   margin:0;
+  text-align: center;
 }
 
 section {
@@ -14,8 +15,7 @@ section {
 /*typography------------------*/
 h1{
   font-family: 'Comfortaa', cursive;
-  font-size: 50px;
-  text-align: center;
+  font-size: 43px;
   margin-top: 100px;
   color: #154FCA;
   font-weight: 700;
@@ -23,14 +23,12 @@ h1{
 
 h2{
   font-size: 20px;
-  text-align: center;
   color: #154FCA;
   font-weight: bold;
 }
 
 #action-h3 {
   font-family: 'Comfortaa', cursive;
-  text-align:center;
   font-size: 20px;
   margin-top: 10px;
   color: #ED9393;
@@ -39,9 +37,10 @@ h2{
 p{
   font-size: 18px;
   line-height: 1.7em;
+  text-align: left;
 }
 
-/*handwritten img styles*/
+/*handwritten img styles--------------------------*/
 #highlight {
   position: absolute;
   left: 5%;
@@ -66,7 +65,7 @@ p{
   left: 67%;
 }
 
-/*handwritten img animation*/
+/*handwritten img ANIMATION-------------------------*/
 @keyframes shake {
   30%, 100% {transform: rotate(0deg);}
   50% {transform: rotate(-20deg);}
@@ -78,7 +77,8 @@ p{
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-/*pencilcase img styles*/
+
+/*pencilcase img styles------------------------------*/
 #pencil-case {
   top: 50%;
   left: 50%;
@@ -89,24 +89,28 @@ p{
 }
 
 /*OVERLAY AND CLOSE--------------------------------------------*/
-
-/*HIGHLIGHT*/
-#highlight-overlay {
+#highlight-overlay, #whiteout-overlay, #pen-overlay, #earphones-overlay {
   position: absolute;
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
   background-color:white;
-  width: 30%;
-  height: 30%;
+  width: 40%;
+  height: auto;
   display:none;
-  color: #ED9393;
-  border-radius: 30px;
+  border-radius: 15px;
   border-style: solid;
-  border-color: #ED9393;
   border-width: 2px;
-  padding: 25px;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+  padding: 30px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.35);
+}
+
+/* specific colors for overlays--------------------- */
+
+/*HIGHLIGHT - pink*/
+#highlight-overlay {
+  color: #ED9393;
+  border-color: #ED9393;
 }
 
 #highlight-overlay h2 {
@@ -119,23 +123,10 @@ p{
   right: 20px;
 }
 
-/*WHITEOUT*/
+/*WHITEOUT - blue*/
 #whiteout-overlay {
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  background-color:white;
-  width: 30%;
-  height: 30%;
-  display:none;
   color: #5292E5;
-  border-radius: 30px;
-  border-style: solid;
   border-color: #5292E5;
-  border-width: 2px;
-  padding: 25px;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
 }
 
 #whiteout-overlay h2 {
@@ -148,23 +139,10 @@ p{
   right: 20px;
 }
 
-/*PEN*/
+/*PEN - dark gray*/
 #pen-overlay {
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  background-color:white;
-  width: 30%;
-  height: 30%;
-  display:none;
   color: #6D6D6D;
-  border-radius: 30px;
-  border-style: solid;
   border-color: #6D6D6D;
-  border-width: 2px;
-  padding: 25px;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
 }
 
 #pen-overlay h2 {
@@ -177,23 +155,10 @@ p{
   right: 20px;
 }
 
-/*EARPHONES*/
+/*EARPHONES - green*/
 #earphones-overlay {
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  background-color:white;
-  width: 30%;
-  height: 30%;
-  display:none;
   color: #6DAE61;
-  border-radius: 30px;
-  border-style: solid;
-  border-color: g#6DAE61;
-  border-width: 2px;
-  padding: 25px;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+  border-color: #6DAE61;
 }
 
 #earphones-overlay h2 {
@@ -235,39 +200,41 @@ a{
 */
 @media only screen and (min-width:769px) {
   h1 {
-    font-size: 50px;
+    font-size: 55px;
   }
 
   #pencil-case {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) rotate(360deg);
-    margin-top:12%;
+    margin-top:15%;
     width: 50%;
   }
 
   /*handwritten img styles*/
   #highlight {
-    position: absolute;
     left: 5%;
-    top: -120px;
+    top: -90px;
   }
 
   #whiteout {
-    position: absolute;
-    top: 250px;
+    top: 270px;
     left: 6%;
   }
 
   #pen {
-    position: absolute;
-    top: -120px;
+    top: -90px;
     left: 75%;
   }
 
   #earphones{
-    position: absolute;
-    top: 250px;
+    top: 270px;
     left: 77%;
+  }
+
+  /*overlay height and width adjustments*/
+  #highlight-overlay, #whiteout-overlay, #pen-overlay, #earphones-overlay {
+    width: 25%;
+    height: auto;
   }
 }
