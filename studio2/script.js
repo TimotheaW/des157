@@ -2,7 +2,7 @@ console.log("reading this");
 "use strict";
 
 //variables---------------------------------------
-
+var actionH3 = document.getElementById ("action-h3");
 var pencilCase = document.getElementById('pencil-case');
 var highlight = document.getElementById('highlight');
 var whiteout = document.getElementById('whiteout');
@@ -26,11 +26,12 @@ var earphonesClose = document.getElementById('earphones-close');
 pencilCase.addEventListener("click", function(){
   console.log(pencilCase.src);
   if(pencilCase.src=="https://timotheaw.github.io/des157/studio2/images/bad-closed.png"){
-    pencilCase.src="https://timotheaw.github.io/des157/studio2/images/open-case-traced.svg";
+    pencilCase.src="https://timotheaw.github.io/des157/studio2/images/open_case_crop.png";
     highlight.setAttribute("class","show");
     whiteout.setAttribute("class","show");
     pen.setAttribute("class","show");
     earphones.setAttribute("class","show");
+    actionH3.innerHTML="click on the icons to learn more!";
   } else {
     pencilCase.src="https://timotheaw.github.io/des157/studio2/images/bad-closed.png";
     highlight.setAttribute("class","hide");
