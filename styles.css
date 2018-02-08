@@ -47,6 +47,7 @@ nav {
 
 ol {
   list-style: decimal;
+  clear:both;
 }
 
 ul {
@@ -72,7 +73,7 @@ p {
   font-size: 18px;
   line-height: 30px;
   margin:auto;
-  color: #FFFFFF;
+  color: black;
 }
 
 #mySketch {
@@ -101,6 +102,10 @@ section {
   padding-top:50px;
   padding-bottom:50px;
   width:50%;
+}
+
+.projects-section-list p {
+  line-height: 0em;
 }
 
 div:first-child {
