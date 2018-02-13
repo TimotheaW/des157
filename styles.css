@@ -25,6 +25,15 @@ h2 {
   padding-left: 20%;
 }
 
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-top: 5%;
+  padding-left: 10%;
+}
+
 <<<<<<< HEAD
 .projects-h2 {
   padding-top: 10%;
@@ -52,6 +61,15 @@ ol {
 
 ul {
   list-style: circle;
+}
+
+.projects-ul {
+  padding-left: 15%;
+}
+
+.projects-ul:last-child {
+  padding-left: 15%;
+  padding-bottom: 5%;
 }
 
 a {
