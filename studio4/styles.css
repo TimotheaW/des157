@@ -7,7 +7,7 @@ body {
 }
 
 #bg {
-  width: 100%;
+  width: 900px;
   height: 100%;
   position:fixed;
   top:0;
@@ -19,8 +19,9 @@ h1{
   font-size: 80px;
   color:white;
   position: absolute;
-  left:25%;
   top:10%;
+  width:900px;
+  text-align:center;
   margin:auto;
 }
 
