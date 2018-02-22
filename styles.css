@@ -120,10 +120,47 @@ section {
   padding-top:50px;
   padding-bottom:50px;
   width:50%;
+  height:auto;
 }
+
+.storyboard {
+  margin-left:23%;
+  padding-top:50px;
+  padding-bottom:30px;
+  width:auto;
+  height:200px;
+}
+
+.storyboard:first-child {
+  float:left;
+  margin-left:27%;
+  padding-top:50px;
+  padding-bottom:30px;
+  width:auto;
+  height:450px;
+}
+
+.storyboard:last-of-type{
+  float:right;
+  margin-right:27%;
+  margin-left:5%;
+  padding-top:50px;
+  padding-bottom:30px;
+  width:auto;
+  height:450px;
+}
+
 
 .projects-section-list p {
   line-height: 0em;
+}
+
+.projects-section h3, p {
+  clear:both;
+}
+
+.projects-section p {
+  padding-bottom: 70px;
 }
 
 div:first-child {
@@ -140,6 +177,7 @@ div:last-child {
   float: right;
   width: 50%;
   height: 100%;
+  margin-bottom:50px;
 }
 
 img {
