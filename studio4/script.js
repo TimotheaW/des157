@@ -31,11 +31,11 @@ function init() {
 
   //CUBE
   var geometry = new THREE.BoxGeometry(20, 20, 20);
-  var color = new THREE.Color("#482C69"); // set the color of the material
+  //this line is useless because i dont use this color variable anywhere else; var color = new THREE.Color("#482C69"); // set the color of the material
   var material = new THREE.MeshLambertMaterial({
     color: "#482C69"
   });
-  var cube = new THREE.Mesh(geometry, material);
+  cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
 
   //set up point light and ambient light so that the cube can be seen
@@ -53,7 +53,7 @@ function init() {
     color: 0xffffff,
     wireframe: true
   });
-  var polygon = new THREE.Mesh(geometry, material);
+  polygon = new THREE.Mesh(geometry, material);
   var size = true;
   scene.add(polygon);
   polygon.position.z = 26;
