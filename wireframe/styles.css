@@ -1,0 +1,123 @@
+body {
+  height: 100%;
+  font-family: Raleway, sans-serif;
+  background-image: url("images/madlib-bg.png");
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section:first-child {
+  margin-left: 55%;
+  margin-bottom: 5%;
+  border-radius: 30px;
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom:80px;
+  text-align: center;
+  width: 550px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+}
+
+section:last-child {
+  margin-left: 55%;
+  margin-bottom: 10%;
+  padding: 1px 4px 1px 10px;
+  border-radius: 30px;
+  background-color: white;
+  width: 550px;
+  height: auto;
+  position: relative;
+  top: 100px;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+}
+
+#container {
+  margin-top: 6%;
+  height:auto;
+}
+
+div {
+  margin: 2%;
+}
+
+label {
+  width: 6em;
+  text-align: right;
+  display: inline-block;
+  padding-right:3%;
+  font-size: 14px;
+}
+
+input {
+  width: 40%;
+  height: 35px;
+  padding: 1%;
+  border:none;
+  border-radius: 10px;
+  background-color:#7459c6;
+  color: white;
+  font-family: Raleway, sans-serif;
+}
+
+input[type="text"]:focus {
+  background-color: #4c3691;
+}
+
+input[type="reset"], input[type="submit"] {
+  width: 15%;
+  height:45px;
+  margin: 2%;
+  padding:10px;
+  float: right;
+  background-color: transparent;
+  border: 2px #ffaa00 solid;
+  color: #ffaa00;
+  font-weight: bold;
+}
+
+input[type="reset"]:hover, input[type="submit"]:hover {
+  border:none;
+  background-color: #ffaa00;
+  color: white;
+  font-weight: 400;
+}
+
+#bottom-reset {
+  position:relative;
+  margin-top: 5%;
+}
+
+p {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: left;
+  line-height: 1.5em;
+  margin:30px;
+  padding-top: 30px;
+  padding-bottom:30px
+}
+
+.show {
+  display:block;
+}
+
+.hide {
+  display:none;
+}
+
+footer {
+  position:fixed;
+  bottom:0;
+  padding:20px;
+  right:0;
+}
+
+a{
+  color:#FFFFFF;
+  text-decoration: none;
+  font-size: 11px;
+  padding-right:20px;
+}
