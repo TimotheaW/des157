@@ -39,7 +39,6 @@ h3 {
   padding-left: 10%;
 }
 
-<<<<<<< HEAD
 .projects-h2 {
   padding-top: 10%;
   color: #FFFFFF;
@@ -53,7 +52,6 @@ nav{
   color: #FFFFFF;
 }
 
-=======
 nav {
   margin-top: 5%;
   padding-left: 23%;
@@ -120,7 +118,19 @@ section {
   top:auto;
 }
 
+.projects-section-siteflow {
+  background-color: #FF676B;
+}
+
 .projects-section img {
+  margin-left:25%;
+  padding-top:50px;
+  padding-bottom:50px;
+  width:50%;
+  height:auto;
+}
+
+.projects-section-siteflow img {
   margin-left:25%;
   padding-top:50px;
   padding-bottom:50px;
