@@ -29,10 +29,3 @@ function processForm() {
 
   return false;
 }
-
-function resetForm (){
-  msg.innerHTML="";
-  results.setAttribute('class','hide');
-  container.style.marginTop = '6%';
-  document.f.reset();
-}
