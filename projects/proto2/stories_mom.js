@@ -24,7 +24,6 @@ function initialize() {
   controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.addEventListener('change', render);
   var light = new THREE.DirectionalLight(0xffffff, 1);
-  light.position.set( 1, 1, 1 ).normalize();
 
   //draws the shape, using MeshPhongMaterial to have shapes appear
   scene.add(light);
@@ -35,7 +34,7 @@ function initialize() {
   //to have multiple shapes instead of just drawing one
   /*
   for (var i = 0; i < 50; i++) {
-    var mesh = new THREE.Mesh(geometry, new THREE.MeshPhongMaterial( { color: Math.random() * 0xffffff }));
+    var mesh = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff }));
     mesh.position.x = (Math.random() - 0.1) * 500;
     mesh.position.y = (Math.random() - 0.1) * 500;
     mesh.position.z = (Math.random() - 0.1) * 500;
@@ -43,16 +42,16 @@ function initialize() {
   }
   */
    for ( var i = 0; i < 2000; i ++ ) {
-       var object = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial( { color: Math.random() * 0xffffff } ) );
+       var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
        object.position.x = Math.random() * 800 - 400;
        object.position.y = Math.random() * 800 - 400;
        object.position.z = Math.random() * 800 - 400;
        object.rotation.x = Math.random() * 2 * Math.PI;
        object.rotation.y = Math.random() * 2 * Math.PI;
        object.rotation.z = Math.random() * 2 * Math.PI;
-      // object.scale.x = Math.random() + 0.1;
-      // object.scale.y = Math.random() + 0.1;
-      // object.scale.z = Math.random() + 0.1;
+       object.scale.x = Math.random() + 0.5;
+       object.scale.y = Math.random() + 0.5;
+       object.scale.z = Math.random() + 0.5;
        scene.add( object );
   }
   //smooths the pixels, without it, it will look grainy
@@ -73,8 +72,8 @@ function initialize() {
 //moushover affect
 function onDocumentMouseMove(event) {
   event.preventDefault();
-  mouse.x = (event.clientX / window.innerWidth)*2 -1;
-  mouse.y = -(event.clientY / window.innerHeight)*2 + 1.5;
+  mouse.x = (event.clientX / window.innerWidth)-1  ;
+  mouse.y = -(event.clientY / window.innerHeight)+1 ;
 }
 
 function onWindowResize() {

@@ -1,34 +1,16 @@
-// //fullscreen ENTER button
-// var full = document.getElementById("enter");
-
-// full.addEventListener('click', function(){
-//   fullscreenchange;
-// });
-
-
-// //overlay timed event
-// var overlay = document.getElementById("overlay");
-
-// overlay=setInterval(overlaydisappear, 4000);
-
-// function overlaydisappear (){
-//   overlay.style.display="none";
-// }
-
-var timerId = document.getElementById('timerId');
+var timerId = document.getElementsByClassName('timerId');
 var overlay = document.getElementsByClassName("overlay");
 var enterbtn = document.getElementById('enterbtn');
+var overlayId = document.getElementById('overlayId');
 
-enterbtn.addEventListener('click', showOv);
-
-function showOv(){
-  overlay.classList.add('show');
+enterbtn.addEventListener('click', function() {
+  // overlayId.setAttribute('class', 'show');
   //fade up overlay
-  timerId=setTimeout(hideOv, 4000);
-}
+  timerId = setTimeout(hideOv, 4000);
+});
 
-function hideOv(){
+function hideOv() {
   //fade down overlay
-  overlay.classList.add('hide');
+  overlayId.setAttribute('class', 'hide');
   clearTimeout(timerId);
-}
+};

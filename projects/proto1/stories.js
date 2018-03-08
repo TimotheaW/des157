@@ -1,21 +1,19 @@
 //3D stuff
 'use strict';
 var camera, controls, scene, renderer;
-var container;
+var container, stats;
 
-var mouse = new THREE.Vector2(),
-  INTERSECTED;
-var radius = 100,
-  theta = 0;
+var mouse = new THREE.Vector2(), INTERSECTED;
+var radius = 100, theta = 0;
 
 initialize();
-render();
+// render();
+animate();
 
 //draws the sphere, sets the window, smooths the textures of the spheres to appear
 function initialize() {
   //background color
   scene = new THREE.Scene();
-  scene.background = new THREE.Color('white');
 
   //illusion to have depth
   scene.fog = new THREE.FogExp2('white', 0.002);

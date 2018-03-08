@@ -23,8 +23,7 @@ function submitForm(e) {
   e.preventDefault();
 
   //get values
-  var firstName = getInputVal('firstName');
-  var lastName = getInputVal('lastName');
+  var name = getInputVal('name');
   var email = getInputVal('email');
   var year = getInputVal('year');
   var major = getInputVal('major');
@@ -38,7 +37,7 @@ function submitForm(e) {
   var emailstory = getInputVal('emailstory');
 
   //save message
-  saveMessage(firstName, lastName, email, year, major, healing, home, workschool, personal, title, share, triggerwarning, emailstory);
+  saveMessage(name, email, year, major, healing, home, workschool, personal, title, share, triggerwarning, emailstory);
 
   //clear form after submission
   document.getElementById('shareform').reset().loadNewPage('stories.html');
@@ -50,12 +49,11 @@ function getInputVal(id) {
 }
 
 // save message to firebase
-function saveMessage(firstName, lastName, email, year, major, healing, home, workschool, personal, title, share, triggerwarning, emailstory) {
+function saveMessage(name, email, year, major, healing, home, workschool, personal, title, share, triggerwarning, emailstory) {
   var newMessageRef = messagesRef.push();
   //sending an object of data to our messages collection in firebase
   newMessageRef.set({
-    firstName: firstName,
-    lastName: lastName,
+    name: name,
     email: email,
     year: year,
     major: major,

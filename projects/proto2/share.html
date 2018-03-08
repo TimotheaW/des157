@@ -27,19 +27,13 @@
 			</ul>
 		</nav>
 
-		<h1 class="resourceabout">Share your story</h1>
+		<h1 class="sharestoryhead">Share your story.</h1>
 		<section class="wrapper">
 			<form id="shareform">
 				<div>
-					<label for="firstName">first name (put 'anonymous' if you don't want this to be public)</label>
-					<input type="text" name="firstName" id="firstName" value="Anonymous" required>
+					<label for="name">name (first, last)</label>
+					<input type="text" name="name" id="name" value="Anonymous" required>
 				</div>
-
-				<div>
-					<label for="lastName">last name</label>
-					<input type="text" name="lastName" id="lastName">
-				</div>
-
 
 				<div>
 					<label for="email">email</label>
@@ -86,11 +80,8 @@
 				</div>
 
 				<div>
-					<input type="submit" value="submit" action="submitForm(e)">
-				</div>
-
-				<div>
-					<button type="button" id="maybelater">maybe later</button>
+					<input type="submit" value="submit" id="formsubmit" action="submitForm(e)">
+					<a class="sharebtn" href="stories.html" id="maybelater">maybe later</a>
 				</div>
 
 			</form>

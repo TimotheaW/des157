@@ -70,6 +70,10 @@ ul {
   padding-bottom: 5%;
 }
 
+#audience-test-ul {
+  padding-bottom:6%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -170,7 +174,7 @@ section {
 }
 
 .projects-section p {
-  padding-bottom: 70px;
+  padding-bottom: 10px;
 }
 
 div:first-child {
