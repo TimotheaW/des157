@@ -303,7 +303,7 @@ p.resourceabout {
 h1.resourceabout {
   font-size: 40px;
   font-weight: 400;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 /*form styles on share.html-------------------------------*/
@@ -370,7 +370,7 @@ input[type="text"], textarea {
 .card {
   font-family: 'Merriweather', serif;
   font-size: 12px;
-  width: 250px;
+  width: 25%;
   height: 200px;
   display: inline-table;
   margin: 1%;
@@ -378,8 +378,6 @@ input[type="text"], textarea {
   padding: 2%;
   color: white;
 }
-
-
 
 /* styles for ABOUT page --------------------------------*/
 
@@ -393,7 +391,6 @@ input[type="text"], textarea {
 p.aboutpage {
   margin-bottom: 1.5%;
 }
-
 
 /* styles for FOOTER--------------------------------*/
 
@@ -410,4 +407,17 @@ footer {
 footer a:link {
   color: gray;
   margin-right: 20px;
+}
+
+/* stories html */
+
+#teststories {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 60px 30px #fff, /* inner white */
+  0 0 100px 60px #f0f, /* middle magenta */
+  0 0 140px 90px #0ff;
+  /* outer cyan */
 }
