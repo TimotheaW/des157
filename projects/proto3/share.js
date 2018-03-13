@@ -16,7 +16,7 @@ firebase.initializeApp(config);
 var messagesRef = firebase.database().ref('messages');
 
 
-// document.getElementById('shareform').addEventListener('submit', submitForm);
+document.getElementById('shareform').addEventListener('submit', submitForm);
 
 //submit form
 function submitForm(e) {

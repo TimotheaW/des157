@@ -165,36 +165,18 @@ function animation () {
     window.requestAnimationFrame(animation);
 }
 
-var clickable = document.getElementById('clickable');
+
 
 var storystars = [];  //array of stars
 var count2 = 0;
 var storystar = function (){
     this.orbitRadius = random(maxOrbit(w,h));
-    this.radius = random (60, this.orbitRadius)/1; //size of the stars
+    this.radius = random (60, this.orbitRadius)/1.5; //size of the stars
     this.orbitX = w/2;
     this.orbitY = h/2;
     this.timePassed = random(0, maxStars);
-    // this.speed = random(this.orbitRadius)/300000;
     this.speed = 0;
     this.alpha = random(2,10)/10;
-
-    // Add clickable div for this star
-    this.clickDiv = document.createElement('div');
-    this.clickDiv.style['display'] = 'block';
-    this.clickDiv.style['position'] = 'absolute';
-    this.clickDiv.style['height'] = this.radius + 'px';
-    this.clickDiv.style['width'] = this.radius + 'px';
-    this.clickDiv.style['cursor'] = 'pointer';
-    var count = count2;
-
-    // Add to clickable surface
-    clickable.appendChild(this.clickDiv);
-
-    this.clickDiv.addEventListener('click', function() {
-        console.log(count);// add firebase print data here or smth
-    });
-
     count2++;
     storystars [count2] = this;
 }
@@ -210,13 +192,8 @@ storystar.prototype.draw = function() {
         this.alpha += 0.05;
     }
 
-    this.clickDiv.style['top'] = (y - this.radius/2) + 'px';
-    this.clickDiv.style['left'] = (x - this.radius/2) + 'px';
-
     context.globalAlpha = this.alpha;
     context.drawImage(canvas3, x - this.radius/2, y - this.radius/2, this.radius, this.radius);
-
-    this.timePassed += this.speed;
 }
 
 //draw stars
@@ -228,20 +205,13 @@ for (var i = 0; i < maxStars; i++){
 for (var i = 0; i < 100; i++){
     new storystar();
 }
-// storystar.addEventListener('click', function ()
-// {
-//     value;
-// });
+storystars.addEventListener('click', function (){
+    value;});
+    //add listener to the entire canvas, make stars keep track of x and y coordinates and then loop through each one
+    //of those to check the star that matches
 
- //for every star create an invisible html element so then when you click that area you can add a click event to it
-
-    //each story star should now have a clickable element associated with it where you can now add eventlisteners to it
+    //for every star create an invisible html element so then when you click that area you can add a click event to it
 
 animation();
 
-//alert for the filter that doesn't work yet
-var filterjs = document.getElementById("filterjs");
-if (onsubmit = "click") {
-    alert('filtered stories is coming soon!');
-}
 
