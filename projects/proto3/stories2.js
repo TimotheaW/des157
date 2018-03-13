@@ -1,5 +1,47 @@
 'use strict'; 
+//linking to firebase------------------------------------------------------------------
+var config = {
+    apiKey: "AIzaSyBU-4i6aqE_eNY3IosjA7ycNm33FXCF7eM",
+    authDomain: "unspoken-37e98.firebaseapp.com",
+    databaseURL: "https://unspoken-37e98.firebaseio.com",
+    projectId: "unspoken-37e98",
+    storageBucket: "",
+    messagingSenderId: "161766093627"
+  };
+  firebase.initializeApp(config);
+  
+  var values;
+  
+  
+  //how to tie in with 3D --> add event listeners on the particles and let them retrieve 
+  // a random post from the database
+  
+  //testing
+  console.log('about to bind on value');
+  var newMessageRef = firebase.database().ref('messages');
+  newMessageRef.on('value', function (snapshot) {
+  
+    // stores the value of the ref as a js Object
+    console.log('val:');
+    values = snapshot.val();
+    console.log(values); // prints values to console
+  
+    // iterates through children of the ref
+    console.log('forEach:');
+    snapshot.forEach(function (childSnapshot) {
+      console.log(childSnapshot.key);
+      console.log(childSnapshot.val());
+      document.getElementById("demo").innerHTML = childSnapshot.key;
+      document.getElementById("demo").innerHTML = "<br />" + childSnapshot.val();
+    }); // for each child, print the key and value to console
+  
+  
+    //test
+    var value = values[Math.random()];
+  });
 
+
+//STARS--------------------------------------------------------------------------------
 //canvas 1 gets the width and height of the canvas
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
@@ -124,11 +166,11 @@ function animation () {
 
 
 
-var storystars = [];
+var storystars = [];  //array of stars
 var count2 = 0;
 var storystar = function (){
     this.orbitRadius = random(maxOrbit(w,h));
-    this.radius = random (60, this.orbitRadius)/1.5;
+    this.radius = random (60, this.orbitRadius)/1.5; //size of the stars
     this.orbitX = w/2;
     this.orbitY = h/2;
     this.timePassed = random(0, maxStars);
@@ -162,6 +204,8 @@ for (var i = 0; i < maxStars; i++){
 for (var i = 0; i < 100; i++){
     new storystar();
 }
+storystars.addEventListener('click', function (){
+    value;});
 
 animation();
 
