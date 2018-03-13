@@ -213,6 +213,10 @@ storystar.prototype.draw = function() {
     this.clickDiv.style['top'] = (y - this.radius/2) + 'px';
     this.clickDiv.style['left'] = (x - this.radius/2) + 'px';
 
+    this.clickDiv.addEventListener('click',function(){
+        value;
+    });
+
     context.globalAlpha = this.alpha;
     context.drawImage(canvas3, x - this.radius/2, y - this.radius/2, this.radius, this.radius);
 
