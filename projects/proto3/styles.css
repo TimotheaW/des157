@@ -274,6 +274,9 @@ a:hover {
 
 nav {
   overflow: hidden;
+}
+
+#storiesnav{
   z-index:9999;
   position:fixed;
   right:0;
