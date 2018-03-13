@@ -276,13 +276,13 @@ nav {
   overflow: hidden;
 }
 
-#storiesnav{
+#storiesnav {
   z-index:5;
   position:fixed;
   right:0;
 }
 
-#filters{
+#filters {
   z-index:6;
   position:fixed;
   left:10;
