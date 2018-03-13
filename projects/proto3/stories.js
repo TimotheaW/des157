@@ -11,35 +11,23 @@ var config = {
   };
   firebase.initializeApp(config);
   
-  var values;
-  var value;
-  
-  
-  //how to tie in with 3D --> add event listeners on the particles and let them retrieve 
-  // a random post from the database
-  
-  //testing
-  console.log('about to bind on value');
+  //make values an array. vCount used to count the values in the array.
+  var values = [];
+  var value;  
+  var vCount = 0; 
+ 
+  //retrieve messages into values.  
+  console.log('retrieve data into values.');
   var newMessageRef = firebase.database().ref('messages');
   newMessageRef.on('value', function (snapshot) {
   
-    // stores the value of the ref as a js Object
-    console.log('val:');
-    values = snapshot.val();
-    console.log(values); // prints values to console
-  
-    // iterates through children of the ref
+    // iterates through children of the ref, print and saved into values
     console.log('forEach:');
     snapshot.forEach(function (childSnapshot) {
       console.log(childSnapshot.key);
       console.log(childSnapshot.val());
-      document.getElementById("demo").innerHTML = childSnapshot.key;
-      document.getElementById("demo").innerHTML = "<br />" + childSnapshot.val();
-    }); // for each child, print the key and value to console
-  
-  
-    //test
-    value = values[Math.random()];
+      values[vCount++] = childSnapshot.val();
+    });
   });
 
 
@@ -187,21 +175,24 @@ var storystar = function (){
     this.clickDiv.style['height'] = this.radius + 'px';
     this.clickDiv.style['width'] = this.radius + 'px';
     this.clickDiv.style['cursor'] = 'pointer';
-    var count = count2;
+
+    //add event listener to the star
+    this.clickDiv.addEventListener('click',function(){
+        var index = Math.floor(Math.random() * vCount);
+        console.log('index =' + index);
+        value = values[index];
+        alert(value.firstName + ":\n" + value.share );
+    });
 
     // Add to clickable surface
     clickable.appendChild(this.clickDiv);
-
-    this.clickDiv.addEventListener('click', function() {
-        console.log(values);// add firebase print data here or smth
-    });
 
     count2++;
     storystars [count2] = this;
 }
 
 storystar.prototype.draw = function() {
-    var x = Math.sin(this.timePassed)*this.orbitRadius + this.orbitX;
+    var x = Math.sin(this.timePassed)* this.orbitRadius + this.orbitX;
     var y = Math.cos(this.timePassed)* this.orbitRadius + this.orbitY;
     var twinkle = random (10);
 
