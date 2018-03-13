@@ -67,6 +67,8 @@ function saveMessage(name, email, year, major, healing, home, workschool, person
     triggerwarning: triggerwarning,
     emailstory: emailstory,
   });
+  var overlaystories = document.getElementById("overlaystories");
+  if (onsubmit = "click") {
+    alert('Thank you for your willingness and bravery to share your story with us');
+  };
 };
-
-
