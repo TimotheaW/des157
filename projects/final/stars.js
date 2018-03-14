@@ -1,41 +1,4 @@
 'use strict'; 
-console.log("hi");
-//linking to firebase------------------------------------------------------------------
-
-function retrieveData(){
-    // var filter = document.getElementsByName("filter");
-    // var onsubmit = 
-
-    var config = {
-        apiKey: "AIzaSyBU-4i6aqE_eNY3IosjA7ycNm33FXCF7eM",
-        authDomain: "unspoken-37e98.firebaseapp.com",
-        databaseURL: "https://unspoken-37e98.firebaseio.com",
-        projectId: "unspoken-37e98",
-        storageBucket: "",
-        messagingSenderId: "161766093627"
-     };
-    firebase.initializeApp(config);
-  
-    //make values an array. vCount used to count the values in the array.
-    var values = [];
-    var value;  
-    var vCount = 0; 
- 
-    //retrieve messages into values.  
-    console.log('retrieve data into values.');
-
-    var newMessageRef = firebase.database().ref('messages');
-    newMessageRef.on('value', function (snapshot) {
-        // iterates through children of the ref, print and saved into values
-        console.log('forEach:');
-        snapshot.forEach(function (childSnapshot) {
-        console.log(childSnapshot.key);
-        console.log(childSnapshot.val());
-        values[vCount++] = childSnapshot.val();
-        });
-    });
-};
-
 //STARS--------------------------------------------------------------------------------
 //canvas 1 gets the width and height of the canvas
 var canvas = document.getElementById('canvas');
@@ -159,38 +122,17 @@ function animation () {
     window.requestAnimationFrame(animation);
 }
 
-var clickable = document.getElementById('clickable');
-
 var storystars = [];  //array of stars
 var count2 = 0;
 var storystar = function (){
     this.orbitRadius = random(maxOrbit(w,h));
-    this.radius = random (60, this.orbitRadius)/1; //size of the stars
+    this.radius = random (60, this.orbitRadius)/4; //size of the stars
     this.orbitX = w/2;
     this.orbitY = h/2;
     this.timePassed = random(0, maxStars);
     // this.speed = random(this.orbitRadius)/300000;
     this.speed = 0;
     this.alpha = random(2,10)/10;
-
-    // Add clickable div for this star
-    this.clickDiv = document.createElement('div');
-    this.clickDiv.style['display'] = 'block';
-    this.clickDiv.style['position'] = 'absolute';
-    this.clickDiv.style['height'] = this.radius + 'px';
-    this.clickDiv.style['width'] = this.radius + 'px';
-    this.clickDiv.style['cursor'] = 'pointer';
-
-    //add event listener to the star
-    this.clickDiv.addEventListener('click',function(){
-        var index = Math.floor(Math.random() * vCount);
-        console.log('index =' + index);
-        value = values[index];
-        alert(value.name + "\n" + "\n" + value.title + "\n" + "\n" + value.share );
-    });
-
-    // Add to clickable surface
-    clickable.appendChild(this.clickDiv);
 
     count2++;
     storystars [count2] = this;
@@ -206,9 +148,6 @@ storystar.prototype.draw = function() {
     } else if (twinkle === 2 && this.alpha < 1) {
         this.alpha += 0.05;
     }
-
-    this.clickDiv.style['top'] = (y - this.radius/2) + 'px';
-    this.clickDiv.style['left'] = (x - this.radius/2) + 'px';
 
     context.globalAlpha = this.alpha;
     context.drawImage(canvas3, x - this.radius/2, y - this.radius/2, this.radius, this.radius);
@@ -226,16 +165,5 @@ for (var i = 0; i < 100; i++){
     new storystar();
 }
 
-
- //for every star create an invisible html element so then when you click that area you can add a click event to it
-
-    //each story star should now have a clickable element associated with it where you can now add eventlisteners to it
-
 animation();
-
-//alert for the filter that doesn't work yet
-// var filterjs = document.getElementById("filterjs");
-// if (onsubmit = "click") {
-//     alert('filtered stories is coming soon!');
-// }
 
