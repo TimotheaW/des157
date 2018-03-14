@@ -29,13 +29,15 @@
 	</nav>
 
 	<form id="filters">
-		<select name="filter">
+		<label id="filterlabel" for="filter">filter:</label>
+		<select name="filter" id="filter">
+			<option value="all">all</option>
 	    	<option value="home">Home</option>
 	    	<option value="personal">Personal</option>
 	    	<option value="workschool">Work/School</option>
 	  	</select>
 		<br><br>
-		<input type="submit" id="storiesbtn">
+		<input type="button" value="filter" onClick="retrieveData()" id="queryStory">
 	</form>
 	<canvas id="canvas"></canvas>
 	<div class="clickable" id="clickable">

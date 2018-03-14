@@ -5,11 +5,11 @@ function getInputVal(id) {
   return document.getElementById(id).value;
 }
 
-function getCheckedVal(id){
-  if (document.getElementById(id).checked==true){
-    return("on");
+function getCheckedVal(id) {
+  if (document.getElementById(id).checked == true) {
+    return ("on");
   } else {
-    return("off");
+    return ("off");
   }
 }
 
@@ -68,10 +68,9 @@ function submitForm() {
 
   //clear form after submission
   document.getElementById('shareform').reset();
-
-    // var overlaystories = document.getElementById("overlaystories");
-  // if (onsubmit = "click") {
-  //   alert('Thank you for your willingness and bravery to share your story with us');
-  // };
 };
 
+var triggerwarninginfo = document.getElementById("triggerwarninginfo");
+triggerwarninginfo.addEventListener('click', function() {
+  alert('Trigger warnings are warnings that a work contains writing or concepts that could act as a trauma trigger. If your story contains graphic content that could trigger others, please make sure to include trigger warnings.');
+});

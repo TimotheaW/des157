@@ -1,12 +1,7 @@
 'use strict'; 
 console.log("hi");
 //linking to firebase------------------------------------------------------------------
-
-function retrieveData(){
-    // var filter = document.getElementsByName("filter");
-    // var onsubmit = 
-
-    var config = {
+var config = {
         apiKey: "AIzaSyBU-4i6aqE_eNY3IosjA7ycNm33FXCF7eM",
         authDomain: "unspoken-37e98.firebaseapp.com",
         databaseURL: "https://unspoken-37e98.firebaseio.com",
@@ -16,25 +11,40 @@ function retrieveData(){
      };
     firebase.initializeApp(config);
   
-    //make values an array. vCount used to count the values in the array.
+    //make values an array. vCount counts the values in the array.
     var values = [];
     var value;  
     var vCount = 0; 
- 
-    //retrieve messages into values.  
-    console.log('retrieve data into values.');
 
-    var newMessageRef = firebase.database().ref('messages');
-    newMessageRef.on('value', function (snapshot) {
-        // iterates through children of the ref, print and saved into values
-        console.log('forEach:');
-        snapshot.forEach(function (childSnapshot) {
-        console.log(childSnapshot.key);
-        console.log(childSnapshot.val());
-        values[vCount++] = childSnapshot.val();
-        });
-    });
-};
+    retrieveData();
+
+    function clearData(){
+        values=[];
+        vCount =0;
+    }
+
+    function retrieveData(){
+        clearData();
+        var filter = document.getElementById("filter").value;
+         //retrieve messages into values.  
+        console.log('retrieve data into values.');
+        var newMessageRef = firebase.database().ref('messages');
+        var filterRef = newMessageRef;
+        if (filter != "all") {
+            filterRef = newMessageRef.orderByChild(filter).equalTo("on");
+        }
+        filterRef.on('value', function(snapshot) {
+                    // iterates through children of the ref, print and saved into values
+            console.log('forEach:');
+            snapshot.forEach(function (childSnapshot) {
+                console.log(childSnapshot.key);
+                console.log(childSnapshot.val());
+                values[vCount++] = childSnapshot.val();
+            });
+        })
+        
+    };
+
 
 //STARS--------------------------------------------------------------------------------
 //canvas 1 gets the width and height of the canvas
@@ -226,16 +236,4 @@ for (var i = 0; i < 100; i++){
     new storystar();
 }
 
-
- //for every star create an invisible html element so then when you click that area you can add a click event to it
-
-    //each story star should now have a clickable element associated with it where you can now add eventlisteners to it
-
 animation();
-
-//alert for the filter that doesn't work yet
-// var filterjs = document.getElementById("filterjs");
-// if (onsubmit = "click") {
-//     alert('filtered stories is coming soon!');
-// }
-
