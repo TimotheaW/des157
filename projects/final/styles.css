@@ -69,17 +69,17 @@ p {
 /*enter button on index page*/
 
 .btn {
-  padding: 5px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 12px;
+  padding: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 7px;
   color: white;
   border: 1px solid white;
   border-radius: 25px;
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 23pt;
+  font-size: 21pt;
   transition: all 0.4s ease 0s;
 }
 
