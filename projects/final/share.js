@@ -14,7 +14,7 @@ function getCheckedVal(id){
 }
 
 // save message to firebase
-function saveMessage(name, email, year, major, healing, home, workschool, personal, title, share, triggerwarning, emailstory) {
+function saveMessage(name, email, year, major, home, workschool, personal, title, share, triggerwarning, emailstory) {
   var newMessageRef = messagesRef.push();
   //sending an object of data to our messages collection in firebase
   newMessageRef.set({
@@ -22,7 +22,6 @@ function saveMessage(name, email, year, major, healing, home, workschool, person
     email: email,
     year: year,
     major: major,
-    healing: healing,
     home: home,
     workschool: workschool,
     personal: personal,
@@ -56,7 +55,6 @@ function submitForm() {
   var email = getInputVal('email');
   var year = getInputVal('year');
   var major = getInputVal('major');
-  var healing = getCheckedVal('healing');
   var home = getCheckedVal('home');
   var workschool = getCheckedVal('workschool');
   var personal = getCheckedVal('personal');
@@ -66,7 +64,7 @@ function submitForm() {
   var emailstory = getCheckedVal('emailstory');
 
   //save message
-  saveMessage(name, email, year, major, healing, home, workschool, personal, title, share, triggerwarning, emailstory);
+  saveMessage(name, email, year, major, home, workschool, personal, title, share, triggerwarning, emailstory);
 
   //clear form after submission
   document.getElementById('shareform').reset();
