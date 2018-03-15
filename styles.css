@@ -49,6 +49,7 @@ h3 {
 nav{
   padding-left: 23%;
   padding-top:20px;
+  padding-bottom:50px;
   color: #FFFFFF;
 }
 
@@ -105,10 +106,10 @@ p {
 }
 
 section {
-  width: 100%;
+  /* width: 100%;
   top: 29%;
   bottom: 0px;
-  position: fixed;
+  position: fixed; */
 }
 
 .projects-section {

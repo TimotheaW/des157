@@ -2,13 +2,8 @@
 
 body {
   margin: auto;
-  /* background: radial-gradient(circle, #414141, #1C1C1C); */
-  background: #E8CBC0;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #636FA4, #E8CBC0);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #615567, #f7ddfc);
+  background: linear-gradient(to right, #615567, #f7ddbc);
 }
 
 h1.index {
@@ -85,8 +80,7 @@ p {
 
 .btn:hover {
   background-color: white;
-  color: #8491C4;
-
+  color: #665c69;
 }
 
 /* Share or View page -----------------------------------*/
@@ -126,7 +120,7 @@ p {
   }
   100% {
     opacity: 0;
-    z-index: 1;
+    z-index: -100;
   }
 }
 
@@ -137,11 +131,11 @@ p {
   width: 100%;
   height: 100%;
   text-align: center;
-  -webkit-animation: fadeInOut 3.5s;
-  animation: fadeInOut 3.5s;
+  -webkit-animation: fadeInOut 4s;
+  animation: fadeInOut 4s;
 }
 
-p.shareview-animation {
+p.stories-animation {
   text-align: center;
   width: 100%;
   line-height: 2em;
@@ -149,6 +143,7 @@ p.shareview-animation {
   font-size: 16px;
   top: 50%;
   position: absolute;
+  opacity:1;
 }
 
 #shareview {
@@ -193,8 +188,7 @@ input[type="text"] {
 
 #formsubmit:hover, #maybelater:hover {
   background-color: white;
-  color: #8491C4;
-
+  color: #665c69;
 }
 
 /*---STORIES STYLES--------------------------------------*/
@@ -228,15 +222,15 @@ canvas {
 
 #queryStory:hover {
   background-color: white;
-  color: #8491C4;
+  color: #665c69;
 }
 
 #clickableshare {
-  bottom: 20px;
-  right: 45px;
-  position: absolute;
+  bottom: 60px;
+  right: 50px;
+  position: fixed;
   color: white;
-  font-size: 30px;
+  font-size: 33px;
   font-weight: 400;
   z-index: 5;
   font-family: 'Lato', sans-serif;
@@ -250,7 +244,7 @@ a {
 }
 
 a:hover {
-  color: #8491C4;
+  color: #665c69;
 }
 
 .clickable {
@@ -288,7 +282,7 @@ select {
   transition: all 0.4s ease 0s;
   background-color: black;
   color: white;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 nav ul {
@@ -310,9 +304,10 @@ nav ul li:last-child {
   padding-right: 30px;
 }
 
-nav ul li a.active{
-border-bottom: 1px solid white;
+nav ul li a.active {
+  border-bottom: 1px solid white;
 }
+
 /* styles for resource and about page */
 
 .resourceabout {
@@ -385,8 +380,6 @@ form label {
   color: white;
 }
 
-
-
 [type="checkbox"], [type="radio"] {
   box-sizing: border-box;
   margin-right: 4px;
@@ -397,7 +390,7 @@ input[type="text"], textarea {
   height: 20px;
   padding: 6px;
   border: none;
-  background-color: #636FA4;
+  background-color: #665c69;
   border-radius: 5px;
   color: white;
   margin-top: 8px;
@@ -418,10 +411,10 @@ input[type="text"], textarea {
 /* styles for resources page --------------------------------*/
 
 div.resourcecard {
-  margin-top:2%;
-  margin-bottom:6%;
+  margin-top: 2%;
+  margin-bottom: 6%;
   margin: auto;
-  width:77%;
+  width: 77%;
 }
 
 .card {
@@ -439,11 +432,11 @@ div.resourcecard {
 /* styles for ABOUT page --------------------------------*/
 
 .aboutpage {
-color: white;
-line-height: 15pt;
-text-align: justify;
-width: 40%;
-margin: auto;
+  color: white;
+  line-height: 15pt;
+  text-align: justify;
+  width: 40%;
+  margin: auto;
 }
 
 p.aboutpage {
@@ -460,7 +453,6 @@ footer {
   padding: 25px;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
-
 }
 
 footer a:link {
@@ -468,6 +460,6 @@ footer a:link {
   margin-right: 20px;
 }
 
-footer:hover{
-  color: #8491C4;
+footer:hover {
+  color: #665c69;
 }

@@ -74,3 +74,4 @@ var triggerwarninginfo = document.getElementById("triggerwarninginfo");
 triggerwarninginfo.addEventListener('click', function() {
   alert('Trigger warnings are warnings that a work contains writing or concepts that could act as a trauma trigger. If your story contains graphic content that could trigger others, please make sure to include trigger warnings.');
 });
+
