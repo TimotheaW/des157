@@ -206,7 +206,7 @@ var storystar = function() {
     // closeBtn.type = 'button';
     // document.querySelector('storyBox').append('closeBtn');
     storyBox.setAttribute('class', 'show');
-    storyBox.innerHTML = "<div><p id='storytitle'>" + value.title + "</p> <p id='storyname'>by " + value.name + "</p>" + "<p id='storyshare'>" + value.share + "</p></div><div id='close'>&otimes;<div>";
+    storyBox.innerHTML = "</p></div><div id='close'>&otimes;<div>" + "<div><p id='storytitle'>" + value.title + "</p> <p id='storyname'>by " + value.name + "</p>" + "<p id='storyshare'>" + value.share;
 
     // var title = storytitle;
     // value.title = title.fontsize(7);

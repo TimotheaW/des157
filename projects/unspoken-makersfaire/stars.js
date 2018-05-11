@@ -1,54 +1,8 @@
 'use strict';
-// Cited code: https://codepen.io/giana/pen/qbWNYy
-
-//linking to firebase------------------------------------------------------------------
-var config = {
-  apiKey: "AIzaSyBU-4i6aqE_eNY3IosjA7ycNm33FXCF7eM",
-  authDomain: "unspoken-37e98.firebaseapp.com",
-  databaseURL: "https://unspoken-37e98.firebaseio.com",
-  projectId: "unspoken-37e98",
-  storageBucket: "",
-  messagingSenderId: "161766093627"
-};
-firebase.initializeApp(config);
-
-//make values an array. vCount counts the values in the array.
-var values = [];
-var value;
-var vCount = 0;
-
-retrieveData();
-
-function clearData() {
-  values = [];
-  vCount = 0;
-}
-
-function retrieveData() {
-  clearData();
-  var filter = document.getElementById("filter").value;
-  //retrieve messages into values.
-  console.log('retrieve data into values.');
-  var newMessageRef = firebase.database().ref('messages');
-  var filterRef = newMessageRef;
-  if (filter != "all") {
-    filterRef = newMessageRef.orderByChild(filter).equalTo("on");
-  }
-  filterRef.on('value', function(snapshot) {
-    // iterates through children of the ref, print and saved into values
-    console.log('forEach:');
-    snapshot.forEach(function(childSnapshot) {
-      console.log(childSnapshot.key);
-      console.log(childSnapshot.val());
-      values[vCount++] = childSnapshot.val();
-    });
-  })
-
-};
-
-
 //STARS--------------------------------------------------------------------------------
 //canvas 1 gets the width and height of the canvas
+// Cited code: https://codepen.io/giana/pen/qbWNYy
+
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 var w = canvas.width = window.innerWidth;
@@ -70,9 +24,9 @@ var half = canvas2.width / 2;
 var gradient2 = context2.createRadialGradient(half, half, 0, half, half, half);
 //colorstop(offset,color)
 gradient2.addColorStop(0.025, '#fff');
-gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 26%)');
+gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
 gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
-gradient2.addColorStop(1, 'transparent');
+gradient2.addColorStop(0.75, 'transparent');
 
 context2.fillStyle = gradient2;
 context2.beginPath();
@@ -113,8 +67,8 @@ function random(min, max) {
     max = min;
     min = hold;
   }
-  //how many stars
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+
+  return Math.floor(Math.random() * (max - min + 1));
 }
 
 function maxOrbit(x, y) {
@@ -125,13 +79,12 @@ function maxOrbit(x, y) {
 
 var star = function() {
   this.orbitRadius = random(maxOrbit(w, h));
-  this.radius = random(60, this.orbitRadius) / 9;
+  this.radius = random(60, this.orbitRadius) / 11;
   this.orbitX = w / 2;
   this.orbitY = h / 2;
   this.timePassed = random(0, maxStars);
-  this.speed = random(this.orbitRadius) / 600000;
-  //effects opacity of the star
-  this.alpha = random(1, 10) / 14;
+  this.speed = random(this.orbitRadius) / 500000;
+  this.alpha = random(2, 10) / 10;
   count++;
   stars[count] = this;
 }
@@ -139,8 +92,7 @@ var star = function() {
 star.prototype.draw = function() {
   var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX;
   var y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY;
-  //controls how much the stars twinkle
-  var twinkle = random(5);
+  var twinkle = random(10);
 
   if (twinkle === 1 && this.alpha > 0) {
     this.alpha -= 0.05;
@@ -154,9 +106,8 @@ star.prototype.draw = function() {
 }
 
 function animation() {
-  //draws shapes on top of canvas
   context.globalCompositeOperation = 'source-over';
-  context.globalAlpha = 0.6;
+  context.globalAlpha = 0.7;
   context.fillStyle = 'hsla(228, 29%, 15%, 1)';
   context.fillRect(0, 0, w, h);
 
@@ -165,7 +116,7 @@ function animation() {
     stars[i].draw();
   };
 
-  context3.fillStyle = 'hsla(150, 64%, 6%, 1)';
+  context3.fillStyle = 'hsla(150%, 64%, 6%, 1)';
   for (var i = 1, l = storystars.length; i < l; i++) {
     storystars[i].draw();
   }
@@ -173,54 +124,17 @@ function animation() {
   window.requestAnimationFrame(animation);
 }
 
-var clickable = document.getElementById('clickable');
-
 var storystars = []; //array of stars
 var count2 = 0;
 var storystar = function() {
   this.orbitRadius = random(maxOrbit(w, h));
-  this.radius = random(60, this.orbitRadius) / 1; //size of the stars
+  this.radius = random(60, this.orbitRadius) / 4; //size of the stars
   this.orbitX = w / 2;
   this.orbitY = h / 2;
   this.timePassed = random(0, maxStars);
+  // this.speed = random(this.orbitRadius)/300000;
   this.speed = 0;
-  //effects opacity of the star
-  this.alpha = random(1, 10) / 12;
-
-  // Adds clickable div for all storystars
-  this.clickDiv = document.createElement('div');
-  this.clickDiv.style.display = 'block';
-  this.clickDiv.style.position = 'absolute';
-  this.clickDiv.style.height = this.radius / 4 + 'px';
-  this.clickDiv.style.width = this.radius / 4 + 'px';
-  this.clickDiv.style.cursor = 'pointer';
-
-  //adds event listener to the star to read a value from the database
-  this.clickDiv.addEventListener('click', function() {
-    var index = Math.floor(Math.random() * vCount);
-    var storyBox = document.getElementById("storyBox");
-    console.log('index =' + index);
-    value = values[index];
-    // alert(value.name + "\n" + "\n" + value.title + "\n" + "\n" + value.share);
-    // const closeBtn = document.createElement('button');
-    // closeBtn.type = 'button';
-    // document.querySelector('storyBox').append('closeBtn');
-    storyBox.setAttribute('class', 'show');
-    storyBox.innerHTML = "<div><p id='storytitle'>" + value.title + "</p> <p id='storyname'>by " + value.name + "</p>" + "<p id='storyshare'>" + value.share + "</p></div><div id='close'>&otimes;<div>";
-
-    // var title = storytitle;
-    // value.title = title.fontsize(7);
-    // title.style.fontSize = "40px";
-    // title.style.fontWeight = "700";
-
-    storyBox.addEventListener('click', function() {
-      storyBox.innerHTML = "";
-      storyBox.setAttribute('class', 'hide');
-    });
-  });
-
-  // Add to clickable surface
-  clickable.appendChild(this.clickDiv);
+  this.alpha = random(2, 10) / 10;
 
   count2++;
   storystars[count2] = this;
@@ -236,9 +150,6 @@ storystar.prototype.draw = function() {
   } else if (twinkle === 2 && this.alpha < 1) {
     this.alpha += 0.05;
   }
-
-  this.clickDiv.style.top = (y - this.radius / 8) + 'px';
-  this.clickDiv.style.left = (x - this.radius / 8) + 'px';
 
   context.globalAlpha = this.alpha;
   context.drawImage(canvas3, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
@@ -257,13 +168,3 @@ for (var i = 0; i < 100; i++) {
 }
 
 animation();
-
-waitHide();
-
-function waitHide() {
-  var obj = document.getElementById("stories-animation");
-  window.setTimeout(
-    function removethis() {
-      obj.style.display = 'none';
-    }, 4000);
-}

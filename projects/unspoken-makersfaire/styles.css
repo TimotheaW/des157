@@ -54,11 +54,12 @@ p.index {
 }
 
 p {
-  font-family: 'Merriweather', serif;
-  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
   color: white;
   font-weight: 300;
-  letter-spacing:0.3px;
+  letter-spacing: 0.3px;
+  width: 90%;
 }
 
 /* button styles ---------------------------------------------------*/
@@ -144,7 +145,7 @@ p.stories-animation {
   font-size: 16px;
   top: 50%;
   position: absolute;
-  opacity:1;
+  opacity: 1;
 }
 
 #shareview {
@@ -192,6 +193,16 @@ input[type="text"] {
   color: #665c69;
 }
 
+.unspokentitle {
+  color: #ffffff6b;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  position: fixed;
+  top: 0%;
+  left: 2%;
+}
+
 /*---STORIES STYLES--------------------------------------*/
 
 canvas {
@@ -226,7 +237,7 @@ canvas {
   color: #665c69;
 }
 
-#clickableshare a:hover{
+#clickableshare a:hover {
   /* background-color: transparent; */
   color: white;
 }
@@ -241,15 +252,16 @@ canvas {
   z-index: 5;
   font-family: 'Lato', sans-serif;
 }
+
 /* link styles-------------------------------------------- */
 
 a {
   text-decoration: none;
-  color: white;
+  color: #ffffff82;
 }
 
 a:hover {
-  color: #665c69;
+  color: white;
 }
 
 #clickableshare:hover {
@@ -315,7 +327,7 @@ nav ul li:last-child {
 }
 
 nav ul li a.active {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #ffffff82;
 }
 
 /* styles for resource and about page */
@@ -390,7 +402,7 @@ form label {
   color: white;
 }
 
-[type= "checkbox"], [type="radio"] {
+[type="checkbox"], [type="radio"] {
   box-sizing: border-box;
   margin-right: 4px;
 }
@@ -443,10 +455,11 @@ div.resourcecard {
 
 .aboutpage {
   color: white;
-  line-height: 15pt;
+  line-height: 18pt;
   text-align: justify;
   width: 40%;
   margin: auto;
+  font-family: 'Merriweather', serif;
 }
 
 p.aboutpage {
@@ -475,12 +488,13 @@ footer:hover {
 }
 
 /* storybox display */
-#storyBox{
+
+#storyBox {
   font-family: 'Lato', sans-serif;
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   /* margin: auto; */
   padding-top: 100px;
@@ -488,21 +502,30 @@ footer:hover {
   color: white;
   padding: 20px;
   max-height: 920px;
-  overflow:auto;
+  overflow-x: hidden;
+  padding-top: 260px;
 }
 
 #storyBox div {
   background-color: rgb(15, 15, 15);
   width: 6in;
-  line-height:25px;
+  line-height: 25px;
   max-height: 550px;
-  overflow:auto;
+  overflow-x: hidden;
   padding: 20px;
   margin: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  font-family: "Lato", sans-serif;
+  padding-bottom: 10px;
 }
 
 #close {
+  clear: both;
   background-color: none;
+  font-size: 24px;
+}
+
+#storytitle {
+  font-size: 30px;
+  font-family: "Merriweather", serif;
+  line-height: 42px;
 }
