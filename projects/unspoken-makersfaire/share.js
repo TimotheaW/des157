@@ -79,4 +79,3 @@ var formsubmit = document.getElementById("formsubmit");
 formsubmit.addEventListener('click', function() {
   alert("Thank you for your willingness and bravery to share your story with us!");
 })
-})
